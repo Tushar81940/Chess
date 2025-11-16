@@ -37,7 +37,6 @@ mongoose.connect(MONGODB_URI, { useNewUrlParser: true }, (err, conn) => {
   const io = socketIO(httpsServer);
   sockets.setIO(io)
   httpsServer.listen(HTTPSPORT, () => console.log(`${pkg.name} ${pkg.version} https server up and running on port ${HTTPSPORT}`));
-  // WARNING: app.listen(80) will NOT work here!
 
 
 })
